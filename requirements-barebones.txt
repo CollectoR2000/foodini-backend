@@ -1,0 +1,11 @@
+fastapi
+ujson
+python-multipart
+uvicorn[standard]
+tenacity
+python-jose[cryptography]
+passlib[bcrypt]
+sqlalchemy
+pymysql
+alembic
+requests
