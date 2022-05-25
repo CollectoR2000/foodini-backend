@@ -1,0 +1,5 @@
+*
+!foodini/
+**/__pycache__/
+!requirements.txt
+!CHANGELOG.md
