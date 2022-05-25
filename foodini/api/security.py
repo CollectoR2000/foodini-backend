@@ -8,7 +8,7 @@ from api import deps
 from core import OAuth2PasswordCookieBearer, settings
 from database import crud, mappings, models
 
-oauth2_scheme = OAuth2PasswordCookieBearer(token_url=f"{settings.API_ENDPOINT_PREFIX}{settings.API_V1_PREFIX}/authentication/token")
+oauth2_scheme = OAuth2PasswordCookieBearer(token_url=f"{settings.API_ENDPOINT_PREFIX}{settings.API_V1_PREFIX}/authentication/login")
 
 
 def authenticated(db: Session = Depends(deps.database), token: str = Depends(oauth2_scheme)) -> mappings.StoredUserV1:
