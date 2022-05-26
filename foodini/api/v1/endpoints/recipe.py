@@ -19,7 +19,7 @@ def get_recipes(
     db: Session = Depends(deps.database),
     response: Response
 ) -> List[models.Recipe]:
-    response.headers["Total-Count"] = crud.recipe.count(db)
+    response.headers["Total-Count"] = str(crud.recipe.count(db))
     return crud.recipe.read_multi(db, skip=skip, limit=limit)
 
 
