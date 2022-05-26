@@ -62,7 +62,7 @@ services:
             - proxy
 
     foodini_api:
-        image: foodini:0.1.0
+        image: foodini:0.1.1
         secrets:
             - source: MYSQL_FOODINI_PASSWORD
               target: DATABASE_PASS
