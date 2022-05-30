@@ -11,7 +11,7 @@ networks:
 
 
 configs:
-    NGINX_SITE_V1:
+    NGINX_SITE_V2:
         file: ./configs/default.conf
 
 
@@ -77,7 +77,7 @@ services:
         environment:
             - TZ=Europe/Amsterdam
         configs:
-            - source: NGINX_SITE_V1
+            - source: NGINX_SITE_V2
               target: /etc/nginx/conf.d/default.conf
         secrets:
             - source: NGINX_SSL_CERT_V1
