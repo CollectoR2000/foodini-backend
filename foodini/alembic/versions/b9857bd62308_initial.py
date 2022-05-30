@@ -50,7 +50,7 @@ def upgrade():
                     sa.Column('recipe_id', sa.Integer(), nullable=False),
                     sa.Column('name', sa.String(length=256), nullable=False),
                     sa.Column('optional', sa.Boolean(), nullable=False),
-                    sa.Column('comment', sa.String(length=256), nullable=False),
+                    sa.Column('comment', sa.String(length=256), nullable=True),
                     sa.Column('user_id', sa.Integer(), nullable=False),
                     sa.Column('created_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
                     sa.Column('updated_at', sa.DateTime(), server_default=sa.text('now()'), nullable=False),
