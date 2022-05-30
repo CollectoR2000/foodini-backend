@@ -21,6 +21,8 @@ def login(
         raise HTTPException(status_code=401)
     if not crypto.verify_password(credentials.password, user.hashed_password):
         raise HTTPException(status_code=401)
+    if not user.active:
+        raise HTTPException(status_code=401)
     access_token = crypto.create_access_token(data={"username": user.username})
     response.set_cookie(
         key="access_token", value=f"Bearer {access_token}",
