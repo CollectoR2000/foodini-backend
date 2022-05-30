@@ -5,7 +5,7 @@ version: "3.9"
 
 services:
     foodini_api:
-        image: foodini:dev
+        image: foodini:0.2.0-dev
         environment:
             - RELOAD=True
             - DEBUG=True
