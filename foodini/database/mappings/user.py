@@ -17,6 +17,8 @@ class UpdateUserV1(Mapping):
     first_name: default_str | None = None
     last_name: default_str | None = None
     password: default_str | None = None
+    admin: bool | None = None
+    active: bool | None = None
 
 
 class StoredUserV1(ORMMapping):
