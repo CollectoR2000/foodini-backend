@@ -63,6 +63,8 @@ services:
 
     foodini_api:
         image: foodini:0.1.1
+        environment:
+            CORS_ORIGINS: '["http://localhost:8080"]'
         secrets:
             - source: MYSQL_FOODINI_PASSWORD
               target: DATABASE_PASS
