@@ -27,7 +27,9 @@ def login(
     response.set_cookie(
         key="access_token", value=f"Bearer {access_token}",
         expires=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
-        httponly=True, secure=True, samesite="strict"
+        httponly=settings.ACCESS_TOKEN_HTTPONLY,
+        secure=settings.ACCESS_TOKEN_SECURE,
+        samesite=settings.ACCESS_TOKEN_SAMESITE
     )
     return user
 
