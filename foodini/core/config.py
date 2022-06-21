@@ -24,7 +24,6 @@ class Settings(BaseSettings):
     SECRET_KEY: constr(min_length=128, max_length=128)
     HASHING_ALGORITHM: str = "bcrypt"
     SIGNING_ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
     # Deployment settings.
     RELOAD: bool = False
@@ -35,6 +34,12 @@ class Settings(BaseSettings):
     # Logging settings.
     LOGGING_COLOR: str = "cyan"
     LOGGING_LEVEL: int = logging.INFO
+
+    # Authentication token settings.
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
+    ACCESS_TOKEN_HTTPONLY: bool = True
+    ACCESS_TOKEN_SECURE: bool = True
+    ACCESS_TOKEN_SAMESITE: str = "strict"
 
     # Cors settings.
     CORS_ORIGIN_REGEX: str | None = None
