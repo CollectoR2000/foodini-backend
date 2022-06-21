@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented here.
 
+## [0.3.0] - 2022-06-21
+- Added access token configuration to the settings.
+
 ## [0.2.0] - 2022-05-30
 - Implemented full CRUD functionality for users.
 - Added security check to validate the user is active.

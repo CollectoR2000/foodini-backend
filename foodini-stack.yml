@@ -62,7 +62,7 @@ services:
             - proxy
 
     foodini_api:
-        image: foodini:0.2.0
+        image: foodini:0.3.0
         environment:
             CORS_ORIGINS: '["http://localhost:8080"]'
             ACCESS_TOKEN_SECURE: 'False'
